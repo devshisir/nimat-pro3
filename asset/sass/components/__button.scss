@@ -1,0 +1,56 @@
+.btn {
+    padding: 9px 30px;
+    min-width: 130px;
+    transition: 0.2s;
+    font-size: 15px;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-check:checked+.btn:focus-visible,
+.btn.active:focus-visible,
+.btn.show:focus-visible,
+.btn:first-child:active:focus-visible,
+:not(.btn-check)+.btn:active:focus-visible {
+    box-shadow: none !important;
+}
+
+.btn-primary {
+    background-color: $brand;
+    border-color: $brand;
+
+    &:hover,
+    &:focus {
+        opacity: 0.9;
+        background-color: $brand;
+        border-color: $brand;
+    }
+}
+
+.btn-primary:active {
+    opacity: 0.9;
+    background-color: $brand !important;
+    border-color: $brand !important;
+}
+
+.btn-outline-primary {
+    border-color: $brand;
+    color: $brand !important;
+
+    &:hover,
+    &:focus {
+        background-color: $brand !important;
+        border-color: $brand !important;
+        color: #fff !important;
+    }
+}
+
+.btn-outline-primary:active {
+    background-color: $brand !important;
+    border-color: $brand !important;
+    color: #fff !important;
+}
+
+.button_icon {
+    margin-right: 5px;
+}

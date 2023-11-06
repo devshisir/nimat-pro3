@@ -1,0 +1,47 @@
+.sidebar {
+    padding: 20px 0px;
+
+    .single_menu_box {
+        padding: 0px 25px;
+
+        .maninInfo {
+            margin-bottom: 5px;
+
+            h4 {
+                color: $brand;
+                font-size: 17px;
+                font-family: mainfont_bold !important;
+
+                span {
+                    float: right;
+                }
+            }
+        }
+
+        ul {
+            li {
+                a {
+                    font-size: 14px;
+                    display: inline-block;
+                    color: #717171;
+                    font-family: mainfont_medium;
+                    padding: 2px 0px;
+
+                    &:hover {
+                        color: $brand;
+                    }
+                }
+
+                .active {
+                    font-family: mainfont_bold !important;
+                }
+            }
+        }
+    }
+
+    .menu_devider {
+        background-color: #DEDEDE;
+        height: 1px;
+        margin: 15px 0px;
+    }
+}

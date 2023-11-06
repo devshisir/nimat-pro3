@@ -1,0 +1,152 @@
+#headerTop {
+    display: flex;
+    justify-content: flex-start;
+
+    .leftInfo {
+        display: flex;
+        justify-content: space-between;
+        width: 270px;
+        align-items: flex-end;
+        padding-right: 15px;
+
+        .logoBox {
+            a {
+                background-color: #E3E3E3;
+                display: inline-block;
+                border-radius: 0px 50px 0px 29px;
+                padding: 10px 5px;
+                box-sizing: border-box;
+
+                img {
+                    height: 90px;
+                }
+            }
+        }
+
+        .toggle_button {
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            font-size: 25px;
+            margin-bottom: 13px;
+        }
+    }
+
+    .rightInfo {
+        flex: 1;
+        width: 100%;
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .user_top {
+        padding-top: 10px;
+
+        .header_right {
+            >ul {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                column-gap: 0px;
+
+                li {
+                    display: inline-block;
+                }
+
+                .notificationButton {
+                    position: relative;
+                    left: 10px;
+
+                    a,
+                    button {
+                        font-size: 20px;
+                        color: #fff;
+                        height: 35px;
+                        width: 35px;
+                        line-height: 33px;
+                        display: block;
+                        text-align: center;
+                        border-radius: 30px;
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
+
+                        &:hover {
+                            color: #ddd;
+                        }
+                    }
+                }
+
+                .userInfo {
+                    .btn-group {
+                        .dropdown-toggle {
+                            display: flex;
+                            background-color: transparent;
+                            border: none;
+                            align-items: center;
+                            column-gap: 17px;
+                            padding: 0px;
+                            justify-content: end;
+
+                            span {
+                                height: 35px;
+                                width: 35px;
+                                font-size: 12px;
+                                background-color: #C9C9C9;
+                                text-align: center;
+                                line-height: 33px;
+                                border-radius: 30px;
+                                color: $brand;
+                            }
+
+                            p {
+                                color: #fff;
+                                font-family: mainfont_semi;
+                            }
+
+                            &::after {
+                                display: none;
+                            }
+                        }
+
+                        .dropdown-toggle:active {
+                            background-color: transparent !important;
+                        }
+
+                        .dropdown-menu {
+                            border: none;
+                            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+                            li {
+                                display: block;
+
+                                .dropdown-item {
+                                    font-size: 16px;
+                                    color: $bodyColor;
+
+                                    &:hover {
+                                        color: $brand;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .global_header {
+        padding-bottom: 10px;
+
+        .breadComeTitle {
+            h4 {
+                color: #fff;
+                font-size: 22px;
+            }
+        }
+    }
+}

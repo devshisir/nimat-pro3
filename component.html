@@ -1,0 +1,176 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+   <meta charset="utf-8">
+   <title>JABATAN UKUR</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="asset/img/favicon.png" sizes="180x180">
+   <link rel="icon" href="asset/img/favicon.png" sizes="32x32" type="image/png">
+   <link rel="icon" href="asset/img/favicon.png" sizes="16x16" type="image/png">
+   <!-- global styles link -->
+   <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+   <link rel="stylesheet" href="asset/css/nice-select.css">
+   <link rel="stylesheet" href="asset/css/fontawsome.min.css">
+   <link rel="stylesheet" href="asset/css/style.css">
+   <link rel="stylesheet" href="asset/css/responsive.css">
+</head>
+
+<body>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-12">
+            <div class="card mt-2">
+               <div class="card-header">
+                  <h5 class="h5">Button component</h5>
+               </div>
+               <div class="card-body">
+                  <button type="button" class="btn btn-primary rounded-pill">Save</button>
+                  <button type="button" class="btn btn-outline-primary rounded-pill">Reset</button>
+                  <button type="button" class="btn btn-outline-primary rounded-pill">Back to list</button> <br>
+                  <button class="btn btn-primary rounded-pill mt-2">
+                     <i class="fa-regular fa-plus button_icon"></i>
+                     Add New
+                  </button>
+                  <button class="btn btn-outline-primary rounded-pill mt-2">
+                     <i class="fa-regular fa-plus button_icon"></i>
+                     Add New
+                  </button>
+               </div>
+            </div>
+            <div class="card mt-2">
+               <div class="card-header">
+                  <h5 class="h5">Form component</h5>
+               </div>
+               <div class="card-body">
+                  <div class="row">
+                     <div class="col-xl-7 mx-auto">
+                        <div class="single_input">
+                           <div class="mb-3">
+                              <label class="form-label">Supplier Name <span class="text-danger">*</span></label>
+                              <input type="text" class="form-control" placeholder="example placeholder">
+                           </div>
+                        </div>
+
+                        <div class="single_input">
+                           <div class="mb-3">
+                              <label class="form-label">Date</label>
+                              <input type="text" class="form-control" placeholder="10/18/2023" onfocus="(this.type='date')" onblur="(this.type='text')">
+                           </div>
+                        </div>
+                        <div class="single_input">
+                           <div class="label_box">
+                              <label class="form-label">Select field</label>
+                           </div>
+                           <select>
+                              <option data-display="Select your options">Nothing</option>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                           </select>
+                        </div>
+                        
+                        <div class="single_input mt-6">
+                           <div class="mb-3">
+                              <label class="form-label">Section Code</label>
+                              <div class="customDropdown_form">
+                                 <div class="btn-group">
+                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                       Please Select
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                       <div class="singleInfo">
+                                          <div class="leftInfo">
+                                             <p class="text-primary">Section Code</p>
+                                          </div>
+                                          <div class="RightField">
+                                             <input type="text" class="form-control small">
+                                          </div>
+                                       </div>
+                                       <div class="singleInfo">
+                                          <div class="leftInfo">
+                                             <p class="text-primary">Section Name</p>
+                                          </div>
+                                          <div class="RightField">
+                                             <input type="text" class="form-control small">
+                                          </div>
+                                       </div>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="single_input">
+                           <div class="mb-3">
+                              <label class="form-label">Existing Supplier Code</label>
+                              <div class="input-group">
+                                 <input type="text" class="form-control">
+                                 <span class="input-group-text" id="basic-addon2">
+                                    <i class="fa-regular fa-magnifying-glass"></i>
+                                 </span>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="single_input">
+                           <div class="mb-3 d-flex" style="column-gap: 20px;">
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="1">
+                                 <label class="form-check-label" for="1">Item Received</label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="2">
+                                 <label class="form-check-label" for="2">Item Received</label>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="single_input">
+                           <div class="mb-3 d-flex" style="column-gap: 20px;">
+                              <div class="form-check">
+                                 <input class="form-check-input" name="rad1" type="radio" value="" id="r1">
+                                 <label class="form-check-label" for="r1">Item Received</label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" name="rad1" type="radio" value="" id="r2">
+                                 <label class="form-check-label" for="r2">Item Received</label>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="single_input">
+                           <div class="mb-3 d-flex" style="column-gap: 20px;">
+                              <div class="form-check radio_square">
+                                 <input class="form-check-input" name="rad1" type="radio" value="" id="r11">
+                                 <label class="form-check-label" for="r11">Item Received</label>
+                              </div>
+                              <div class="form-check radio_square">
+                                 <input class="form-check-input" name="rad1" type="radio" value="" id="r22">
+                                 <label class="form-check-label" for="r22">Item Received</label>
+                              </div>
+                           </div>
+                        </div>
+
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- all javascript load here -->
+   <script src="asset/js/vendor/jquery-3.3.1.min.js"></script>
+   <script src="asset/js/bootstrap.bundle.min.js"></script>
+   <script src="asset/js/plugin/jquery.nice-select.min.js"></script>
+   <script src="asset/js/custom.js"></script>
+</body>
+
+</html>
