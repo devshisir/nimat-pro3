@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="utf-8">
-   <title>JABATAN UKUR</title>
+   <title>JABATAN UKUR - Consumable Assets / Items Master</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- Favicons -->
@@ -71,7 +71,7 @@
                <div class="row">
                   <div class="col-lg-7 col-12">
                      <div class="breadComeTitle">
-                        <h4>Consumable Assets Purchase</h4>
+                        <h4>Consumable Assets / Items Master</h4>
                      </div>
                   </div>
                   <div class="col-lg-5 col-12">
@@ -256,13 +256,13 @@
                   <div class="col-lg-6">
                      <div class="single_input">
                         <div class="mb-3">
-                           <label class="form-label">Supplier Code</label>
-                           <div class="input-group">
-                              <input type="text" class="form-control" placeholder="Autofilled text field">
-                              <span class="input-group-text">
-                                 <i class="fa-regular fa-magnifying-glass"></i>
-                              </span>
-                           </div>
+                           <label class="form-label">Type</label>
+                           <select>
+                              <option data-display="Select your options">Nothing</option>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                           </select>
                         </div>
                      </div>
                   </div>
@@ -270,171 +270,45 @@
                   <div class="col-lg-6">
                      <div class="single_input">
                         <div class="mb-3">
-                           <label class="form-label">Invoice No.</label>
+                           <label class="form-label">Code</label>
                            <input type="text" class="form-control">
                         </div>
                      </div>
                   </div>
+                  <div class="col-lg-6"></div>
                   <div class="col-lg-6">
                      <div class="single_input">
                         <div class="mb-3">
-                           <label class="form-label">Invoice Date</label>
-                           <input type="text" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')">
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-6">
-                     <div class="single_input">
-                        <div class="mb-3">
-                           <label class="form-label">Indent No.</label>
+                           <label class="form-label">Units</label>
                            <input type="text" class="form-control">
                         </div>
                      </div>
                   </div>
+                  <div class="col-lg-6"></div>
                   <div class="col-lg-6">
                      <div class="single_input">
                         <div class="mb-3">
-                           <label class="form-label">Indent Date</label>
-                           <input type="text" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')">
+                           <label class="form-label">Description</label>
+                           <textarea class="form-control"></textarea>
                         </div>
                      </div>
                   </div>
+                  <div class="col-lg-6"></div>
                   <div class="col-lg-6">
                      <div class="single_input">
                         <div class="mb-3">
-                           <label class="form-label">Tender No.</label>
-                           <input type="text" class="form-control">
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-6">
-                     <div class="single_input">
-                        <div class="mb-3">
-                           <label class="form-label">Vote No.</label>
-                           <input type="text" class="form-control">
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-6">
-                     <div class="single_input">
-                        <div class="mb-3">
-                           <label class="form-label">Ledger No.</label>
-                           <input type="text" class="form-control">
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-6">
-                     <div class="single_input">
-                        <div class="mb-3">
-                           <label class="form-label">File Ref.</label>
+                           <label class="form-label m-0">Quantity Indication</label>
+                           <p class="sub_form_label text-primary">(To be filled by ICT Operation Unit)</p>
                            <input type="text" class="form-control">
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="devider"></div>
-               <div class="inputTable">
-                  <div class="table-responsive">
-                  <table class="table table-borderless">
-                     <thead class="text-center" style="vertical-align: bottom;">
-                        <tr>
-                           <td style="width: 240px">Item Type</td>
-                           <td style="width: 170px;">Item Code</td>
-                           <td style="width: 360px;">Item Name</td>
-                           <td style="width: 170px;">Total</td>
-                           <td style="width: 170px;">Total <br> Price $</td>
-                           <td style="width: 170px;">Unit <br> Price $</td>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>
-                              <select>
-                                 <option data-display="Select your options">Nothing</option>
-                                 <option value="1">Autofilled text field</option>
-                                 <option value="2">Option 2</option>
-                                 <option value="3">Option 3</option>
-                                 <option value="4">Option 4</option>
-                                 <option value="5">Option 5</option>
-                                 <option value="6">Option 6</option>
-                              </select>
-                           </td>
-                           <td>
-                              <input type="text" class="form-control">
-                           </td>
-                           <td>
-                              <input type="text" class="form-control" disabled>
-                           </td>
-                           <td>
-                              <input type="text" class="form-control">
-                           </td>
-                           <td>
-                              <input type="text" class="form-control">
-                           </td>
-                           <td>
-                              <input type="text" class="form-control">
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <select>
-                                 <option data-display="Select your options">Nothing</option>
-                                 <option value="1">Autofilled text field</option>
-                                 <option value="2">Option 2</option>
-                                 <option value="3">Option 3</option>
-                                 <option value="4">Option 4</option>
-                                 <option value="5">Option 5</option>
-                                 <option value="6">Option 6</option>
-                              </select>
-                           </td>
-                           <td>
-                              <input type="text" class="form-control">
-                           </td>
-                           <td>
-                              <input type="text" class="form-control" disabled>
-                           </td>
-                           <td>
-                              <input type="text" class="form-control">
-                           </td>
-                           <td>
-                              <input type="text" class="form-control">
-                           </td>
-                           <td>
-                              <input type="text" class="form-control">
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <select>
-                                 <option data-display="Select your options">Nothing</option>
-                                 <option value="1">Autofilled text field</option>
-                                 <option value="2">Option 2</option>
-                                 <option value="3">Option 3</option>
-                                 <option value="4">Option 4</option>
-                                 <option value="5">Option 5</option>
-                                 <option value="6">Option 6</option>
-                              </select>
-                           </td>
-                           <td>
-                              <input type="text" class="form-control">
-                           </td>
-                           <td>
-                              <input type="text" class="form-control" disabled>
-                           </td>
-                           <td>
-                              <input type="text" class="form-control">
-                           </td>
-                           <td>
-                              <input type="text" class="form-control">
-                           </td>
-                           <td>
-                              <input type="text" class="form-control">
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-               </div>
+            </div>
+            <div class="bottom_action">
+               <button class="btn btn-primary rounded-pill">Save</button>
+               <button class="btn btn-outline-primary rounded-pill">Reset</button>
+               <button class="btn btn-outline-primary rounded-pill">Back to list</button>
             </div>
          </div>
       </div>

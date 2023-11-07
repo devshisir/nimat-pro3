@@ -23,6 +23,65 @@
     }
 }
 
+textarea.form-control {
+    min-height: 200px;
+    resize: none;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+textarea.form-control::-webkit-scrollbar {
+    width: 7px;
+}
+
+textarea.form-control::-moz-scrollbar {
+    width: 7px;
+}
+
+textarea.form-control::-o-scrollbar {
+    width: 7px;
+}
+
+textarea.form-control::-ms-scrollbar {
+    width: 7px;
+}
+
+textarea.form-control::-webkit-scrollbar-track {
+    background-color: #e5e5e55e;
+}
+
+textarea.form-control::-moz-scrollbar-track {
+    background-color: #e5e5e55e;
+}
+
+textarea.form-control::-o-scrollbar-track {
+    background-color: #e5e5e55e;
+}
+
+textarea.form-control::-ms-scrollbar-track {
+    background-color: #e5e5e55e;
+}
+
+textarea.form-control::-webkit-scrollbar-thumb {
+    background-color: $brand;
+    border-radius: 30px;
+}
+
+textarea.form-control::-moz-scrollbar-thumb {
+    background-color: $brand;
+    border-radius: 30px;
+}
+
+textarea.form-control::-o-scrollbar-thumb {
+    background-color: $brand;
+    border-radius: 30px;
+}
+
+textarea.form-control::-ms-scrollbar-thumb {
+    background-color: $brand;
+    border-radius: 30px;
+}
+
 .form-control.small {
     height: 37px;
     border-color: #C9C9C9;
@@ -77,7 +136,7 @@
     .list {
         width: 100%;
         border: none !important;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.034);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.171);
         border-radius: 10px;
 
         .option {
@@ -146,7 +205,7 @@
         width: 100%;
         padding: 10px 20px;
         border: none;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.034);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.171);
 
         .singleInfo {
             display: flex;
@@ -243,7 +302,7 @@
 }
 
 .form-check-label {
-    font-size: 14px;
+    font-size: 15px;
     position: relative;
     top: -1px;
     cursor: pointer;
@@ -258,4 +317,9 @@
     .form-check-input:checked[type=radio] {
         --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
     }
+}
+
+.sub_form_label {
+    font-size: 13px;
+    margin-bottom: 0.5rem;
 }

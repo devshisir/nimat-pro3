@@ -46,3 +46,20 @@
 .text-primary {
     color: $brand !important;
 }
+
+.topButton_main {
+    display: flex;
+    justify-content: end;
+}
+
+.bottom_action {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.formWrapper {
+    min-height: calc(100vh - 250px);
+}
