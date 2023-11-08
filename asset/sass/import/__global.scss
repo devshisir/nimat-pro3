@@ -63,3 +63,21 @@
 .formWrapper {
     min-height: calc(100vh - 250px);
 }
+
+.text-drak {
+    color: $titleColor;
+}
+
+.checkBoxGrouDouble {
+    flex-wrap: wrap;
+    row-gap: 10px;
+
+    .form-check {
+        min-width: 290px;
+    }
+}
+
+.heading_chech {
+    font-family: mainfont_bold;
+    margin-bottom: 10px;
+}
