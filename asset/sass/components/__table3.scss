@@ -1,0 +1,25 @@
+.table3 {
+    table {
+        border: 1px solid #e5e5e5;
+        text-align: center;
+
+        thead {
+            tr {
+                td {
+                    background-color: $brand;
+                    color: #fff;
+                    font-size: 15px;
+                    border-right: 1px solid #e5e5e5;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    border-right: 1px solid #e5e5e5;
+                }
+            }
+        }
+    }
+}

@@ -81,3 +81,54 @@
     font-family: mainfont_bold;
     margin-bottom: 10px;
 }
+
+.modal-backdrop {
+    background-color: $brand;
+    filter: blur(1);
+}
+
+.modal {
+    z-index: 999999999999999999999999 !important;
+
+    .modal-header {
+        padding: 15px 10px;
+        border: none;
+
+        h4 {
+            font-size: 20px;
+        }
+    }
+
+    .modal-content {
+        border: none;
+    }
+
+    .modal-footer {
+        padding: 0px 10px 15px 10px;
+        border: none;
+    }
+
+    .modal-body {
+        padding: 0px 40px;
+        min-height: 200px;
+    }
+}
+
+.radioWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    color: #fff !important;
+    background-color: $brand;
+    border-color: $brand;
+}
