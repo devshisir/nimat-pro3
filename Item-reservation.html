@@ -1,0 +1,483 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+   <meta charset="utf-8">
+   <title>JABATAN UKUR - Item Reservation</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="asset/img/favicon.png" sizes="180x180">
+   <link rel="icon" href="asset/img/favicon.png" sizes="32x32" type="image/png">
+   <link rel="icon" href="asset/img/favicon.png" sizes="16x16" type="image/png">
+   <!-- global styles link -->
+   <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+   <link rel="stylesheet" href="asset/css/nice-select.css">
+   <link rel="stylesheet" href="asset/css/fontawsome.min.css">
+   <link rel="stylesheet" href="asset/css/style.css">
+   <link rel="stylesheet" href="asset/css/responsive.css">
+</head>
+
+<body>
+
+   <div id="mainWrapper">
+      <!-- header top -->
+      <header id="headerTop">
+         <div class="leftInfo">
+            <div class="logoBox">
+               <a href="/">
+                  <img src="./asset/img/logo.png" alt="">
+               </a>
+            </div>
+            <div class="toggleButton">
+               <button class="toggle_button">
+                  <i class="fa-light fa-bars"></i>
+               </button>
+            </div>
+         </div>
+         <div class="rightInfo">
+            <div class="user_top">
+               <div class="header_right text-end">
+                  <ul>
+                     <li class="notificationButton">
+                        <a href="#"><i class="fa-regular fa-bell"></i></a>
+                     </li>
+                     <li class="userInfo">
+                        <div class="btn-group">
+                           <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span><i class="fa-solid fa-user"></i></span>
+                              <p>Michael</p>
+                           </button>
+                           <ul class="dropdown-menu dropdown-menu-end" style="">
+                              <li>
+                                 <a href="#" class="dropdown-item">Profile</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="dropdown-item">Settings</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="dropdown-item">Another Link</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="dropdown-item">Logout</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="global_header">
+               <div class="row">
+                  <div class="col-lg-7 col-12">
+                     <div class="breadComeTitle">
+                        <h4>Item Reservation</h4>
+                     </div>
+                  </div>
+                  <div class="col-lg-5 col-12">
+                     <div class="single_input d-flex justify-content-end">
+                        <div style="width: 300px;">
+                           <div class="input-group small">
+                              <input type="text" class="form-control small" placeholder="Search…">
+                              <span class="input-group-text" id="basic-addon2">
+                                 <i class="fa-regular fa-magnifying-glass"></i>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- app layout -->
+      <div class="appLayout">
+         <!-- sidebar -->
+         <div class="sidebar">
+            <div class="single_menu_box">
+               <div class="maninInfo">
+                  <h4>
+                     Maintenance
+                     <span><i class="fa-regular fa-angle-down"></i></span>
+                  </h4>
+               </div>
+               <ul>
+                  <li>
+                     <a href="#">Barcode template</a>
+                  </li>
+                  <li>
+                     <a class="active" href="#">Item code template</a>
+                  </li>
+                  <li>
+                     <a href="#">Brand Master</a>
+                  </li>
+                  <li>
+                     <a href="#">Category Master</a>
+                  </li>
+                  <li>
+                     <a href="#">Inventory Master</a>
+                  </li>
+                  <li>
+                     <a href="#">Location Master</a>
+                  </li>
+                  <li>
+                     <a href="#">Branch Master</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Search (Table View)</a>
+                  </li>
+                  <li>
+                     <a href="#">Membership Master</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="menu_devider"></div>
+            <div class="single_menu_box">
+               <div class="maninInfo">
+                  <h4>
+                     Transactions
+                     <span><i class="fa-regular fa-angle-down"></i></span>
+                  </h4>
+               </div>
+               <ul>
+                  <li>
+                     <a href="#">New Item</a>
+                  </li>
+                  <li>
+                     <a href="#">Transfer</a>
+                  </li>
+                  <li>
+                     <a href="#">Distribution</a>
+                  </li>
+                  <li>
+                     <a href="#">Loan </a>
+                  </li>
+                  <li>
+                     <a href="#">Item Received</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Loan</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Return from Loan</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Sales</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Reservation</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Cancel Reservation</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Distribution</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Transfer</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Lost</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Found</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Scrap</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="menu_devider"></div>
+            <div class="single_menu_box">
+               <div class="maninInfo">
+                  <h4>
+                     Reports
+                     <span><i class="fa-regular fa-angle-down"></i></span>
+                  </h4>
+               </div>
+               <ul>
+                  <li>
+                     <a href="#">Member Listing Report</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Listing Report</a>
+                  </li>
+                  <li>
+                     <a href="#">Distribution</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Movement Report</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Received Report</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Sales Report</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Loan Report</a>
+                  </li>
+                  <li>
+                     <a href="#">On Loan Report</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Return from Loan Report</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Reservation Report</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Cancel Reservation</a>
+                  </li>
+                  <li>
+                     <a href="#">Report</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Distribution Report</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Transfer Report</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Lost Report</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Found Report</a>
+                  </li>
+                  <li>
+                     <a href="#">Item Scrap Report</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="app_wrapper">
+            <div class="formWrapper">
+               <div class="row align-items-center">
+                  <div class="col-lg-4">
+                     <div class="mb-3">
+                        <label class="form-label">From Date</label>
+                        <input type="text" class="form-control" placeholder="10/18/2023" onfocus="(this.type='date')" onblur="(this.type='text')">
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="mb-3">
+                        <label class="form-label">To</label>
+                        <input type="text" class="form-control" placeholder="10/18/2023" onfocus="(this.type='date')" onblur="(this.type='text')">
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="mb-3">
+                        <label class="form-label">Search</label>
+                        <div class="input-group">
+                           <input type="text" class="form-control" placeholder="Search…">
+                           <span class="input-group-text" id="basic-addon2">
+                              <i class="fa-regular fa-magnifying-glass"></i>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="devider"></div>
+               <div class="row align-items-center">
+                  <div class="col-lg-6">
+                     <div class="mb-3">
+                        <label class="form-label">Transaction No.</label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-lg-6"></div>
+                  <div class="col-lg-6">
+                     <div class="mb-3">
+                        <label class="form-label">From Date <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" placeholder="10/18/2023" onfocus="(this.type='date')" onblur="(this.type='text')">
+                     </div>
+                  </div>
+                  <div class="col-lg-6"></div>
+                  <div class="col-lg-6">
+                     <div class="mb-3">
+                        <label class="form-label">To Date <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" placeholder="10/18/2023" onfocus="(this.type='date')" onblur="(this.type='text')">
+                     </div>
+                  </div>
+                  <div class="col-lg-6"></div>
+                  <div class="col-lg-6">
+                     <div class="mb-3">
+                        <label class="form-label">Member Barcode</label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-lg-6"></div>
+                  <div class="col-lg-6">
+                     <div class="mb-3">
+                        <label class="form-label">Member Code <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-lg-6"></div>
+                  <div class="col-lg-6">
+                     <div class="mb-3">
+                        <label class="form-label">Member Name</label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-lg-6"></div>
+                  <div class="col-lg-6">
+                     <div class="mb-3">
+                        <label class="form-label">Item Barcode</label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-lg-6"></div>
+                  <div class="col-lg-6">
+                     <div class="mb-3">
+                        <label class="form-label">Item Code <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-lg-6"></div>
+                  <div class="col-lg-6">
+                     <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="row">
+                        <div class="col-lg-6">
+                           <div class="mb-3">
+                              <label class="form-label">On Hand</label>
+                              <input type="text" class="form-control">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="mb-3">
+                        <label class="form-label">Quantity <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <button type="button" class="btn btn-primary rounded-pill" style="margin-top: 15px;">Add</button>
+                  </div>
+               </div>
+               <div class="devider"></div>
+
+
+               <div class="row">
+                  <div class="col-12">
+                     <div class="table3">
+                        <div class="table-responsive">
+                           <table class="table table-borderless">
+                              <thead>
+                                 <tr>
+                                    <td style="width: 150px;">S/No.</td>
+                                    <td style="width: 150px;">Item Code</td>
+                                    <td style="width: 150px;">Barcode</td>
+                                    <td>Description</td>
+                                    <td style="width: 150px;">Quantity</td>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12">
+                     <div class="d-flex justify-content-end" style="column-gap: 10px;">
+                        <button class="btn btn-outline-primary rounded-pill">Save</button>
+                        <button class="btn btn-primary rounded-pill">Delete</button>
+                        <button class="btn btn-outline-primary rounded-pill">Clear</button>
+                        <button class="btn btn-outline-primary rounded-pill">Refresh</button>
+                     </div>
+                  </div>
+                  <div class="col-12 mt-5">
+                     <div class="table3">
+                        <div class="table-responsive">
+                           <table class="table table-borderless">
+                              <thead>
+                                 <tr>
+                                    <td style="width: 200px;">Transaction No.</td>
+                                    <td style="width: 200px;">From Date</td>
+                                    <td style="width: 200px;">To Date</td>
+                                    <td style="width: 200px;">Member Code</td>
+                                    <td style="text-align: left;">Member Name</td>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td>213485</td>
+                                    <td>19/10/23</td>
+                                    <td>MEMB000136</td>
+                                    <td>#SDWSDS</td>
+                                    <td style="text-align: left;">Shisir Imran</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="bottom_action">
+               <button class="btn btn-primary rounded-pill">Save</button>
+               <button class="btn btn-outline-primary rounded-pill">Reset</button>
+               <button class="btn btn-outline-primary rounded-pill">Back to list</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- all javascript load here -->
+   <script src="asset/js/vendor/jquery-3.3.1.min.js"></script>
+   <script src="asset/js/bootstrap.bundle.min.js"></script>
+   <script src="asset/js/plugin/jquery.nice-select.min.js"></script>
+   <script src="asset/js/custom.js"></script>
+</body>
+
+</html>
