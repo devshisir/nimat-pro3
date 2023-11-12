@@ -23,6 +23,23 @@
     }
 }
 
+.form-select {
+    height: 45px;
+    border-color: #C9C9C9;
+    outline: none;
+    box-shadow: none;
+    border-radius: 8px;
+    font-size: 15px;
+    color: $titleColor;
+
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        border-color: $brand;
+    }
+}
+
+
 textarea.form-control {
     min-height: 200px;
     resize: none;

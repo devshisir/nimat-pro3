@@ -263,14 +263,14 @@
    </div>
    <!-- barcode generation modal/popup -->
    <div class="modal fade" id="generateBarCode" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
          <div class="modal-content">
             <div class="modal-header">
                <h4 class="text-primary">Generate Barcode</h4>
             </div>
-            <div class="modal-body">
-               <div class="barcodeGenerateForm">
-                  <form action="#">
+            <form id="barCodeForm" action="#">
+               <div class="modal-body">
+                  <div class="barcodeGenerateForm">
                      <div class="row">
                         <div class="col-12">
                            <div class="label_box">
@@ -305,13 +305,13 @@
                                  </div>
                               </div>
                               <!-- year -->
-                              <div class="row mt-3" id="yearDropDown" style="display: none;">
+                              <div class="row mt-4" id="yearDropDown">
                                  <div class="col-lg-3">
                                     <label class="form-label">Choose Year <span class="text-danger">*</span></label>
                                  </div>
                                  <div class="col-lg-9">
-                                    <select name="yearSelect">
-                                       <option data-display="Select year">Nothing</option>
+                                    <select class="form-select" id="yearSelect">
+                                       <option selected>Select Year</option>
                                        <option value="1">2017</option>
                                        <option value="2">2018</option>
                                        <option value="3">2019</option>
@@ -319,10 +319,13 @@
                                     </select>
                                  </div>
                               </div>
-                              <!-- test -->
-                              <div class="row mt-3">
+
+
+
+                              <!-- input area code -->
+                              <div class="row mt-4" id="sp_no">
                                  <div class="col-lg-3">
-                                    <label class="form-label">SP No. <span class="text-danger">*</span></label>
+                                    <label class="form-label">SP No. (4 digit) <span class="text-danger">*</span></label>
                                  </div>
                                  <div class="col-lg-9">
                                     <input type="number" id="sp_no_id" name="sp_no" class="form-control" onblur="checklength(4,this.value,this.id)"
@@ -330,27 +333,318 @@
                                     />
                                  </div>
                               </div>
-                              <div class="row mt-3">
+                              <div class="row mt-4" id="pelan_no">
                                  <div class="col-lg-3">
-                                    <label class="form-label">Test 1 <span class="text-danger">*</span></label>
+                                    <label class="form-label">Pelan No. (6 digit) <span class="text-danger">*</span></label>
                                  </div>
                                  <div class="col-lg-9">
-                                    <input type="number" id="test1" name="test1" class="form-control" onblur="checklength(5,this.value,this.id)"
-                                    pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==5) return false;"
+                                    <input type="number" id="pelan_no_id" name="pelan_no" class="form-control" onblur="checklength(6,this.value,this.id)"
+                                    pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;"
                                     />
                                  </div>
                               </div>
+                              <div class="row mt-4" id="buku_no">
+                                 <div class="col-lg-3">
+                                    <label class="form-label">buku No. (6 digit) <span class="text-danger">*</span></label>
+                                 </div>
+                                 <div class="col-lg-9">
+                                    <input type="number" id="buku_no_id" name="buku_no" class="form-control" onblur="checklength(6,this.value,this.id)"
+                                    pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;"
+                                    />
+                                 </div>
+                              </div>
+                              <div class="row mt-4" id="cd_no">
+                                 <div class="col-lg-3">
+                                    <label class="form-label">CD No. (4 digit) <span class="text-danger">*</span></label>
+                                 </div>
+                                 <div class="col-lg-9">
+                                    <input type="number" id="cd_no_id" name="cd_no" class="form-control" onblur="checklength(4,this.value,this.id)"
+                                    pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;"
+                                    />
+                                 </div>
+                              </div>
+                              <div class="row mt-4" id="hdd_no">
+                                 <div class="col-lg-3">
+                                    <label class="form-label">HDD No. (6 digit) <span class="text-danger">*</span></label>
+                                 </div>
+                                 <div class="col-lg-9">
+                                    <input type="number" id="hdd_no_id" name="hdd_no" class="form-control" onblur="checklength(6,this.value,this.id)"
+                                    pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;"
+                                    />
+                                 </div>
+                              </div>
+
+                              <div class="row mt-4" id="sp_code">
+                                 <div class="col-lg-3">
+                                    <label class="form-label">Choose field code <span class="text-danger">*</span></label>
+                                 </div>
+                                 <div class="col-lg-9">
+                                    <div class="radioWrapper">
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" value="100" id="SD" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="SD">SD</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" id="GR" value="101" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="GR">GR</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" id="AQ" value="102" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="AQ">AQ</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" id="LA" value="103" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="LA">LA</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" value="104" id="RP" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="RP">RP</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" value="105" id="PT" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="PT">PT</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" value="106" id="BR" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="BR">BR</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" value="107" id="TL" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="TL">TL</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" value="108" id="GT" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="GT">GT</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" value="109" id="MS" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="MS">MS</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" value="110" id="JB" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="JB">JB</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" value="111" id="HK" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="HK">HK</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" value="112" id="FC" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="FC">FC</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" value="113" id="GS" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="GS">GS</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="fall_sp_select" class="btn-check" value="114" id="HY" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="HY">HY</label><br>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="row mt-4" id="pelan_code">
+                                 <div class="col-lg-3">
+                                    <label class="form-label">Choose field code <span class="text-danger">*</span></label>
+                                 </div>
+                                 <div class="col-lg-9">
+                                    <div class="radioWrapper">
+                                       <div class="singleBox">
+                                          <input type="radio" name="pelanSelect" class="btn-check" value="200" id="pelanSelect1" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="pelanSelect1">CP</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="pelanSelect" class="btn-check" value="201" id="pelanSelect2" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="pelanSelect2">GP</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="pelanSelect" class="btn-check" value="202" id="pelanSelect3" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="pelanSelect3">TL</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="pelanSelect" class="btn-check" value="203" id="pelanSelect4" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="pelanSelect4">JUA</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="pelanSelect" class="btn-check" value="204" id="pelanSelect5" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="pelanSelect5">MP</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="pelanSelect" class="btn-check" value="205" id="pelanSelect6" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="pelanSelect6">ST</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="pelanSelect" class="btn-check" value="206" id="pelanSelect7" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="pelanSelect7">GT</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="pelanSelect" class="btn-check" value="207" id="pelanSelect8" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="pelanSelect8">KA</label><br>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="row mt-4" id="buku_code">
+                                 <div class="col-lg-3">
+                                    <label class="form-label">Choose field code <span class="text-danger">*</span></label>
+                                 </div>
+                                 <div class="col-lg-9">
+                                    <div class="radioWrapper">
+                                       <div class="singleBox">
+                                          <input type="radio" name="bukuSelect" class="btn-check" value="300" id="bukuSelect1" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="bukuSelect1">DB<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="bukuSelect" class="btn-check" value="301" id="bukuSelect2" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="bukuSelect2">FB<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="bukuSelect" class="btn-check" value="302" id="bukuSelect3" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="bukuSelect3">TLB<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="bukuSelect" class="btn-check" value="303" id="bukuSelect4" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="bukuSelect4">SSC<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="bukuSelect" class="btn-check" value="304" id="bukuSelect5" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="bukuSelect5">SFD<br>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+
+
+                              <div class="row mt-4" id="cd_code">
+                                 <div class="col-lg-3">
+                                    <label class="form-label">Choose field code <span class="text-danger">*</span></label>
+                                 </div>
+                                 <div class="col-lg-9">
+                                    <div class="radioWrapper">
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="400" id="cdSelect1" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect1">SD<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="401" id="cdSelect2" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect2">GR<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="402" id="cdSelect3" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect3">AQ<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="403" id="cdSelect4" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect4">LA<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="404" id="cdSelect5" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect5">RP<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="405" id="cdSelect6" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect6">PT<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="406" id="cdSelect7" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect7">BR<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="407" id="cdSelect8" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect8">TL<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="408" id="cdSelect9" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect9">GT<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="409" id="cdSelect10" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect10">MS<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="410" id="cdSelect11" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect11">JB<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="411" id="cdSelect12" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect12">HK<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="412" id="cdSelect13" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect13">FC<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="413" id="cdSelect14" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect14">GS<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="cdSelect" class="btn-check" value="414" id="cdSelect15" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="cdSelect15">HY<br>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+
+
+                              <div class="row mt-4" id="hdd_code">
+                                 <div class="col-lg-3">
+                                    <label class="form-label">Choose field code <span class="text-danger">*</span></label>
+                                 </div>
+                                 <div class="col-lg-9">
+                                    <div class="radioWrapper">
+                                       <div class="singleBox">
+                                          <input type="radio" name="hddSelect" class="btn-check" value="500" id="hddSelect1" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="hddSelect1">GST<br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="hddSelect" class="btn-check" value="600" id="hddSelect2" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="hddSelect2">GSM<br>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- distric select -->
+                              <div class="row mt-4" id="district">
+                                 <div class="col-lg-3">
+                                    <label class="form-label">Choose district <span class="text-danger">*</span></label>
+                                 </div>
+                                 <div class="col-lg-9">
+                                    <div class="radioWrapper">
+                                       <div class="singleBox">
+                                          <input type="radio" name="district_select" class="btn-check" value="bruneimuara" id="bruneimuara" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="bruneimuara">Brunei Muara</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="district_select" class="btn-check" id="tutong" value="tutong" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="tutong">Tutong</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="district_select" class="btn-check" id="kualabelait" value="kualabelait" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="kualabelait">Kuala Belait</label><br>
+                                       </div>
+                                       <div class="singleBox">
+                                          <input type="radio" name="district_select" class="btn-check" id="temburong" value="temburong" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-pill" for="temburong">Temburong</label><br>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+
+
+
                            </div>
                         </div>
                      </div>
-                  </form>
+                  </div>
                </div>
-            </div>
-            <div class="modal-footer">
-               <button class="btn btn-primary">Generate Barcode</button>
-               <button class="btn btn-outline-primary">Reset</button>
-               <button class="btn btn-outline-primary" data-bs-dismiss="modal">Exit</button>
-            </div>
+               <div class="modal-footer">
+                  <button class="btn btn-primary" type="submit">Generate Barcode</button>
+                  <button class="btn btn-outline-primary">Reset</button>
+                  <button class="btn btn-outline-primary" data-bs-dismiss="modal">Exit</button>
+               </div>
+            </form>
          </div>
       </div>
    </div>
@@ -362,25 +656,188 @@
    <script src="asset/js/plugin/jquery.nice-select.min.js"></script>
    <script src="asset/js/custom.js"></script>
    <script>
-      var type;
+      var type = null;
       var year;
+      var fieldCode;
+
+      $('#sp_no').hide();
+      $('#pelan_no').hide();
+      $('#buku_no').hide();
+      $('#cd_no').hide();
+      $('#hdd_no').hide();
+      $('#yearDropDown').hide();
+      $('#sp_code').hide();
+      $('#pelan_code').hide();
+      $('#buku_code').hide();
+      $('#cd_code').hide();
+      $('#hdd_code').hide();
+      $('#district').hide();
+
       $('input[name=typeSelect]').change(function(){
-         var value = $( 'input[name=typeSelect]:checked' ).val();
-         type = value;
-         if(type != '0'){
-            $('#yearDropDown').css('display','flex');
-         }
+         var value = $('input[name=typeSelect]:checked' ).val();
+         typeChnage(value);
       });
-      $('select[name=yearSelect]').change(function(){
-         var value = $(this).val();
-         year = value;
-         if(year != 'Nothing'){
+      $('input[name=fieldCodeSelect]').change(function(){
+         var value = $( 'input[name=fieldCodeSelect]:checked' ).val();
+         fieldCode = value;
+         if(fieldCode != undefined){
             
          }else{
             
          }
-         
-      })
+      });
+      
+
+   
+   // type chnage function
+   function typeChnage (value){
+      $('#yearSelect option:first').prop('selected',true);
+      $('input[type=number]').val('');
+      $('#sp_code').hide();
+      $('#pelan_code').hide();
+      $('#buku_code').hide();
+      $('#cd_code').hide();
+      $('#hdd_code').hide();
+      $('input[name="fall_sp_select"]').prop('checked', false);
+      $('input[name="pelanSelect"]').prop('checked', false);
+      $('input[name="bukuSelect"]').prop('checked', false);
+      $('input[name="cdSelect"]').prop('checked', false);
+      $('input[name="hddSelect"]').prop('checked', false);
+      $('input[name="district_select"]').prop('checked', false);
+      $('#district').hide();
+
+      type = value;
+      if(type != null){
+         $('#yearDropDown').show();
+      }
+      if(type == 1){
+         $('#sp_no').show();
+      }else{
+         $('#sp_no').hide();
+      }
+      if(type == 2){
+         $('#pelan_no').show();
+      }else{
+         $('#pelan_no').hide();
+      }
+      if(type == 3){
+         $('#buku_no').show();
+      }else{
+         $('#buku_no').hide();
+      }
+      if(type == 4){
+         $('#cd_no').show();
+      }else{
+         $('#cd_no').hide();
+      }
+      if(type == 5){
+         $('#hdd_no').show();
+      }else{
+         $('#hdd_no').hide();
+      }
+      
+   }
+      
+
+   // no check
+   $('#sp_no_id').on('blur',function(){
+      var vale = $(this).val()
+      if(vale > 0){
+         $('#sp_code').show();
+      }else{
+         $('#sp_code').hide();
+      }
+   })
+
+   $('#pelan_no_id').on('blur',function(){
+      var vale = $(this).val()
+      if(vale > 0){
+         $('#pelan_code').show();
+      }else{
+         $('#pelan_code').hide();
+      }
+   })
+
+   $('#buku_no_id').on('blur',function(){
+      var vale = $(this).val()
+      if(vale > 0){
+         $('#buku_code').show();
+      }else{
+         $('#buku_code').hide();
+      }
+   })
+
+   $('#cd_no_id').on('blur',function(){
+      var vale = $(this).val()
+      if(vale > 0){
+         $('#cd_code').show();
+      }else{
+         $('#cd_code').hide();
+      }
+   })
+
+   $('#hdd_no_id').on('blur',function(){
+      var vale = $(this).val()
+      if(vale > 0){
+         $('#hdd_code').show();
+      }else{
+         $('#hdd_code').hide();
+      }
+   })
+
+   // check if any code select
+   $(
+      'input[name="fall_sp_select"]',
+      ).on('change',function(){
+         if($(this).prop("checked", true)){
+            $('#district').show();
+         }else{
+            $('#district').hide();
+      }
+   })
+   $(
+      'input[name="pelanSelect"]',
+      ).on('change',function(){
+         if($(this).prop("checked", true)){
+            $('#district').show();
+         }else{
+            $('#district').hide();
+      }
+   })
+   $(
+      'input[name="bukuSelect"]',
+      ).on('change',function(){
+         if($(this).prop("checked", true)){
+            $('#district').show();
+         }else{
+            $('#district').hide();
+      }
+   })
+   $(
+      'input[name="cdSelect"]',
+      ).on('change',function(){
+         if($(this).prop("checked", true)){
+            $('#district').show();
+         }else{
+            $('#district').hide();
+      }
+   })
+   $(
+      'input[name="hddSelect"]',
+      ).on('change',function(){
+         if($(this).prop("checked", true)){
+            $('#district').show();
+         }else{
+            $('#district').hide();
+      }
+   })
+   
+
+   
+
+
+   
+
 
       // checklength
       const checklength = (len,val,name) => {
@@ -390,15 +847,18 @@
             for(let i = 0; i < minusVal; i++){
                calculateVal = 0 + calculateVal
             }
-         }else{
-
          }
-          console.log(
-            
-          )
-          $('#' + name).val(calculateVal)
+         $('#' + name).val(calculateVal)
       }
       
+
+   // checkInput
+   
+
+
+
+
+
    </script>
 </body>
 
