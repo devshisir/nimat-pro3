@@ -29,6 +29,7 @@
     position: fixed;
     top: 110px;
     left: 0;
+    min-height: calc(100% - 110px);
     max-height: calc(100% - 110px);
     overflow-y: scroll;
     transition: 0.3s;

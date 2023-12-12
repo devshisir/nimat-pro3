@@ -25,5 +25,4 @@ $(document).ready(function () {
   $("select").each(function () {
     $(this).addClass("form-select");
   });
-  $(".inject").svgInject();
 });

@@ -1,0 +1,658 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+   <meta charset="utf-8">
+   <title>JABATAN UKUR</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="asset/img/favicon.png" sizes="180x180">
+   <link rel="icon" href="asset/img/favicon.png" sizes="32x32" type="image/png">
+   <link rel="icon" href="asset/img/favicon.png" sizes="16x16" type="image/png">
+   <!-- global styles link -->
+   <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+   <link rel="stylesheet" href="asset/css/nice-select.css">
+   <link rel="stylesheet" href="asset/css/fontawsome.min.css">
+   <link rel="stylesheet" href="asset/css/style.css">
+   <link rel="stylesheet" href="asset/css/responsive.css">
+</head>
+
+<body>
+
+   <div id="mainWrapper">
+      <!-- header top -->
+      <header id="headerTop">
+         <div class="leftInfo">
+            <div class="logoBox">
+               <a href="/">
+                  <img src="./asset/img/logo.png" alt="">
+               </a>
+            </div>
+            <div class="toggleButton">
+               <button class="toggle_button">
+                  <i class="fa-light fa-bars"></i>
+               </button>
+            </div>
+         </div>
+         <div class="rightInfo">
+            <div class="user_top">
+               <div class="header_right text-end">
+                  <ul>
+                     <li class="notificationButton">
+                        <a href="#"><i class="fa-regular fa-bell"></i></a>
+                     </li>
+                     <li class="userInfo">
+                        <div class="btn-group">
+                           <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span><i class="fa-solid fa-user"></i></span>
+                              <p>Michael</p>
+                           </button>
+                           <ul class="dropdown-menu dropdown-menu-end" style="">
+                              <li>
+                                 <a href="#" class="dropdown-item">Profile</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="dropdown-item">Settings</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="dropdown-item">Another Link</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="dropdown-item">Logout</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="global_header">
+               <div class="row">
+                  <div class="col-lg-7 col-12">
+                     <div class="breadComeTitle">
+                        <h4>Barcode Page</h4>
+                     </div>
+                  </div>
+                  <div class="col-lg-5 col-12">
+                     <div class="single_input d-flex justify-content-end">
+                        <div style="width: 300px;">
+                           <div class="input-group small">
+                              <input type="text" class="form-control small" placeholder="Search…">
+                              <span class="input-group-text" id="basic-addon2">
+                                 <i class="fa-regular fa-magnifying-glass"></i>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- app layout -->
+      <div class="appLayout">
+         <!-- sidebar -->
+         <div class="sidebar">
+            <div class="accordion" id="sidebarAccordion">
+               <div class="accordion-item">
+                  <h2 class="accordion-header">
+                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#colmenu1" aria-expanded="true">
+                        Maintenance
+                     </button>
+                  </h2>
+                  <div id="colmenu1" class="accordion-collapse collapse show" data-bs-parent="#sidebarAccordion">
+                     <div class="accordion-body">
+                        <div class="single_menu_box">
+                           <ul>
+                              <li>
+                                 <a href="#">Barcode template</a>
+                              </li>
+                              <li>
+                                 <a class="active" href="#">Item code template</a>
+                              </li>
+                              <li>
+                                 <a href="#">Brand Master</a>
+                              </li>
+                              <li>
+                                 <a href="#">Category Master</a>
+                              </li>
+                              <li>
+                                 <a href="#">Inventory Master</a>
+                              </li>
+                              <li>
+                                 <a href="#">Location Master</a>
+                              </li>
+                              <li>
+                                 <a href="#">Branch Master</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Search (Table View)</a>
+                              </li>
+                              <li>
+                                 <a href="#">Membership Master</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="menu_devider"></div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colmenu2" aria-expanded="false">
+                        Transactions
+                     </button>
+                  </h2>
+                  <div id="colmenu2" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
+                     <div class="accordion-body">
+                        <div class="single_menu_box">
+                           <ul>
+                              <li>
+                                 <a href="#">New Item</a>
+                              </li>
+                              <li>
+                                 <a href="#">Transfer</a>
+                              </li>
+                              <li>
+                                 <a href="#">Distribution</a>
+                              </li>
+                              <li>
+                                 <a href="#">Loan </a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Lost</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Found</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Scrap</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="menu_devider"></div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colmenu3" aria-expanded="false">
+                        Reports
+                     </button>
+                  </h2>
+                  <div id="colmenu3" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
+                     <div class="accordion-body">
+                        <div class="single_menu_box">
+                           <ul>
+                              <li>
+                                 <a href="#">Member Listing Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Listing Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Distribution</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Movement Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Received Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Sales Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Loan Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">On Loan Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Return from Loan Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Reservation Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Cancel Reservation</a>
+                              </li>
+                              <li>
+                                 <a href="#">Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Distribution Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Transfer Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Lost Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Found Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Scrap Report</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="app_wrapper">
+            <div class="data_table_wrapper">
+               <div class="globalPageContentHeder">
+                  <div class="row align-items-center">
+                     <div class="col-lg-7">
+                        <h4 class="h5 m-0">Barcode page</h4>
+                     </div>
+                     <div class="col-lg-5">
+                        <div class="rightButton text-end">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="barcodePageWrapper mt-4">
+                  <div class="brcodePageTable">
+                     <form id="myForm">
+                     <table class="table">
+                        <thead>
+                           <tr>
+                              <th>-</th>
+                              <th>Form</th>
+                              <th class="text-center">Selected Values For Item Code</th>
+                              <th class="text-center">Selected Values For BarCode</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <!-- single item -->
+                           <tr>
+                              <td>Type</td>
+                              <td>
+                                 <select class="form-select" id="first-dropdown">
+                                    <option value="" disabled selected>Select a type</option>
+                                    <option value="FAIL SP - SP">FAIL SP - SP</option>
+                                    <option value="PELAN">PELAN</option>
+                                    <option value="BUKU">BUKU</option>
+                                    <option value="CD - SP">CD</option>
+                                    <option value="HDD">HDD</option>
+                                    option
+                                 </select>
+                              </td>
+                              <td class="text-center">SP</td>
+                              <td class="text-center">-</td>
+                           </tr>
+                           <!-- single item -->
+                           <tr>
+                              <td>Tahun</td>
+                              <td>
+                                 <input type="number" id="year" class="form-control" min="4" onKeyPress="if(this.value.length==4) return false;">
+                              </td>
+                              <td class="text-center">23</td>
+                              <td class="text-center">23</td>
+                           </tr>
+                           <!-- single item -->
+                           <tr>
+                              <td id="Dlabel">Select type</td>
+                              <td>
+                                 <input type="number" class="form-control" id="digiInput" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;">
+                              </td>
+                              <td class="text-center">-</td>
+                              <td class="text-center">-</td>
+                           </tr>
+                           <!-- single item -->
+                           <tr>
+                              <td id="kodLabel">Kod Fail</td>
+                              <td>
+                                 <select class="form-select" id="second-dropdown">
+                                    <option value="" disabled selected>Select a category first</option>
+                                 </select>
+                              </td>
+                              <td class="text-center">SK</td>
+                              <td class="text-center">123</td>
+                           </tr>
+                           <!-- single item -->
+                           <tr>
+                              <td>Dareah</td>
+                              <td>
+                                 <select class="form-select" id="dareah">
+                                    <option selected disabled>Select Dareah</option>
+                                    <option value="BM-1000">Brunei Muara - BM - 1000</option>
+                                    <option value="TU-2000">Tutong - TU - 2000</option>
+                                    <option value="KB-3000">Kuala Belait - KB - 3000</option>
+                                    <option value="TE-4000">Temburong - TE - 4000</option>
+                                 </select>
+                              </td>
+                              <td class="text-center">BM</td>
+                              <td class="text-center">1000</td>
+                           </tr>
+                           <!-- single item -->
+                           <tr>
+                              <td>G/P</td>
+                              <td>
+                                 <select class="form-select" id="g/p">
+                                    <option selected disabled>Select G/P</option>
+                                    <option value="G">Government - G</option>
+                                    <option value="P">Private - P</option>
+                                 </select>
+                              </td>
+                              <td class="text-center">G</td>
+                              <td class="text-center">-</td>
+                           </tr>
+                           <!-- single item -->
+                           <tr>
+                              <td>Item Code</td>
+                              <td colspan="3">
+                                 <input id="itemCodeFinal" type="text" class="form-control text-center" readonly>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>Bar Code</td>
+                              <td colspan="3">
+                                 <input type="number" class="form-control text-center">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+
+   <!-- all javascript load here -->
+   <!-- <script src="asset/js/vendor/jquery-3.3.1.min.js"></script> -->
+   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+   <script src="asset/js/bootstrap.bundle.min.js"></script>
+   <script src="asset/js/plugin/jquery.nice-select.min.js"></script>
+   <script src="asset/js/custom.js"></script>
+   <script>
+      // reset local storage
+      window.onload = function() {
+         localStorage.removeItem('first-dropdown');
+         localStorage.removeItem('second-dropdown');
+         localStorage.removeItem('digiInput');
+         localStorage.removeItem('dareah');
+         localStorage.removeItem('g/p');
+      };
+
+
+
+
+      const form = document.getElementById('myForm');
+      form.addEventListener('input', function(event) {
+         const inputField = event.target;
+         const inputValue = inputField.value;
+         const inputId = inputField.id;
+     
+         // Store/update the form data in localStorage or perform other actions
+         // For example, storing in localStorage:
+         localStorage.setItem(inputId, inputValue);
+         const type = localStorage.getItem('first-dropdown')
+         const year = localStorage.getItem('year')
+         const digiInput = localStorage.getItem('digiInput')
+         const seconddropdown = localStorage.getItem('second-dropdown')
+         const dareah = localStorage.getItem('dareah')
+         const gp = localStorage.getItem('g/p')
+
+
+         if(type != null && year != null && digiInput != null && seconddropdown != null && dareah != null && gp != null){
+            var finalItemCode = '';
+            if(type == 'FAIL SP - SP' || type == 'CD - SP'){
+               finalItemCode = 'SP'+year.slice(-2)+'/'+digiInput+'/'+seconddropdown.substring(0,3)+'/'+dareah.substring(0,2)+'/'+gp
+            }else{
+               finalItemCode = seconddropdown.substring(0,3)+digiInput+dareah.substring(0,2)
+            }
+            $('#itemCodeFinal').val(finalItemCode.replace(/\s/g, ''))
+         }
+         
+
+
+
+
+
+
+      });
+
+
+      
+
+
+
+
+
+
+
+
+
+
+      const firstDropdown = document.getElementById('first-dropdown');
+      const secondDropdown = document.getElementById('second-dropdown');
+      // defaulr year
+      const YearField = document.getElementById('year')
+      const now = new Date();
+      const currentYear = now.getFullYear();
+      YearField.value = currentYear;
+      localStorage.setItem('year', currentYear);
+
+
+      YearField.addEventListener('input', function(event) {
+         if (event.target.value < 4) {
+            event.target.value = currentYear;
+         }
+      });
+
+
+
+
+
+      const options = {
+         // sp option
+         'FAIL SP - SP': [
+            "SD - 100",
+            "GR - 101",
+            "AQ - 102",
+            "LA - 103",
+            "RP - 104",
+            "PT - 105",
+            "BR - 106",
+            "TL - 107",
+            "GT - 108",
+            "MS - 109",
+            "JB - 110",
+            "HK - 111",
+            "FC - 112",
+            "GS - 113",
+            "HY - 114",
+            "AS - 115",
+            "PL - 116",
+            "PY - 117",
+            "RK - 118",
+            "SC - 119",
+            "MC - 120",
+            "ST - 121",
+            "OL - 122",
+            "SK - 123",
+            "DP - 124",
+            "CL - 125",
+            "CC - 126",
+            "TG - 127"
+         ],
+         // pelen option
+         'PELAN': [
+            "CP - 200",
+            "GP - 201",
+            "TL - 202",
+            "JUA - 203",
+            "MP - 204",
+            "ST - 205",
+            "GT - 206",
+            "KA - 207"
+         ],
+         "BUKU": [
+            "DB - 300",
+            "FB - 301",
+            "TLB - 302",
+            "SSC - 303",
+            "SFD - 304"   
+         ],
+         'CD - SP': [
+            "SD - 400",
+            "GR - 401",
+            "AQ - 402",
+            "LA - 403",
+            "RP - 404",
+            "PT - 405",
+            "BR - 406",
+            "TL - 407",
+            "GT - 408",
+            "MS - 408",
+            "JB - 410",
+            "HK - 411",
+            "FC - 412",
+            "GS - 413",
+            "HY - 414",
+            "AS - 415",
+            "PL - 416",
+            "PY - 417",
+            "RK - 418",
+            "SC - 419",
+            "MC - 420",
+            "ST - 421",
+            "OL - 422",
+            "SK - 423",
+            "DP - 424",
+            "CL - 425",
+            "CC - 426"   
+         ],
+         'HDD' : [
+            "GST - 500",
+            "GSM - 600"   
+         ],
+      };
+      function populateSecondDropdown() {
+         const selectedValue = firstDropdown.value;
+         const digiInput = $('#digiInput');
+         secondDropdown.innerHTML = ''; // Clear existing options
+
+         if (selectedValue === '') {
+            digiInput.attr('disabled', 'disabled'); 
+            const defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.textContent = 'Select a type first';
+            defaultOption.disabled = true;
+            defaultOption.selected = true;
+            secondDropdown.appendChild(defaultOption);
+         } else {
+            options[selectedValue].forEach((option) => {
+               const optionElement = document.createElement('option');
+               optionElement.value = option;
+               optionElement.textContent = option;
+               secondDropdown.appendChild(optionElement);
+            });
+            digiInput.removeAttr('disabled', 'disabled'); 
+         }
+      }
+      firstDropdown.addEventListener('change', populateSecondDropdown);
+      populateSecondDropdown();
+
+
+      // first drop oncnage
+      firstDropdown.addEventListener('change', function(event) {
+         const newValue = event.target.value;
+         const digitLabel = $('#Dlabel');
+         const kodLabel = $('#kodLabel');
+         const digiInput = $('#digiInput');
+
+         if(newValue === 'FAIL SP - SP'){
+            digitLabel.html('SP No. (4 Digits)')
+            digiInput.attr('onKeyPress', 'if(this.value.length==4) return false;');
+            digiInput.val('');
+            kodLabel.html('Kod Fail')
+            
+            localStorage.removeItem('second-dropdown');
+            localStorage.removeItem('digiInput');
+            localStorage.removeItem('dareah');
+            localStorage.removeItem('g/p');
+            $('#itemCodeFinal').val('')
+
+
+         }else if(newValue === 'PELAN'){
+            digitLabel.html('No Pelan (6 Digits)')
+            digiInput.attr('onKeyPress', 'if(this.value.length==6) return false;');
+            digiInput.val('');
+
+            kodLabel.html('Kod Info')
+            
+            localStorage.removeItem('second-dropdown');
+            localStorage.removeItem('digiInput');
+            localStorage.removeItem('dareah');
+            localStorage.removeItem('g/p');
+            $('#itemCodeFinal').val('')
+
+         }else if(newValue === 'BUKU'){
+            digitLabel.html('No Buku (6 Digits)')
+            digiInput.attr('onKeyPress', 'if(this.value.length==6) return false;');
+            digiInput.val('');
+
+            kodLabel.html('Kod Info')
+            
+            localStorage.removeItem('second-dropdown');
+            localStorage.removeItem('digiInput');
+            localStorage.removeItem('dareah');
+            localStorage.removeItem('g/p');
+            $('#itemCodeFinal').val('')
+
+
+
+         }else if(newValue === 'CD'){
+            digitLabel.html('No. CD (4 Digits)')
+            digiInput.attr('onKeyPress', 'if(this.value.length==4) return false;');
+            digiInput.val('');
+
+            kodLabel.html('Kod CD Fail SP')
+            
+            localStorage.removeItem('second-dropdown');
+            localStorage.removeItem('digiInput');
+            localStorage.removeItem('dareah');
+            localStorage.removeItem('g/p');
+            $('#itemCodeFinal').val('')
+
+
+         }else if(newValue === 'HDD'){
+            digitLabel.html('No. Siri HDD (6 Digits)')
+            digiInput.attr('onKeyPress', 'if(this.value.length==6) return false;');
+            digiInput.val('');
+
+            kodLabel.html('Kod Info')
+            
+            localStorage.removeItem('second-dropdown');
+            localStorage.removeItem('digiInput');
+            localStorage.removeItem('dareah');
+            localStorage.removeItem('g/p');
+            $('#itemCodeFinal').val('')
+
+
+         }
+         
+      });
+
+
+
+      // year input chnage
+
+
+
+
+   </script>
+</body>
+
+</html>

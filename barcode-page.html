@@ -72,7 +72,7 @@
                <div class="row">
                   <div class="col-lg-7 col-12">
                      <div class="breadComeTitle">
-                        <h4>Computer Equipment listing</h4>
+                        <h4>Barcode Page</h4>
                      </div>
                   </div>
                   <div class="col-lg-5 col-12">
@@ -249,182 +249,146 @@
                <div class="globalPageContentHeder">
                   <div class="row align-items-center">
                      <div class="col-lg-7">
-                        <h4 class="h5 m-0">Computer Equipment listing</h4>
+                        <h4 class="h5 m-0">Barcode page</h4>
                      </div>
                      <div class="col-lg-5">
                         <div class="rightButton text-end">
-                           <a href="#" class="btn btn-primary rounded-pill">
-                              <i class="fa-regular fa-plus button_icon"></i>
-                              Add Computer Equipment
-                           </a>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="masterTable mt-5">
-                  <div class="table-responsive">
-                     <table class="table" id="computerListTable">
-                        <thead>
-                           <tr>
-                              <td scope="col" style="width: 120px;">
-                                 <span>Hardware <br> Category</span>
-                              </td>
-                              <td scope="col" style="width: 120px;">
-                                 <span>Survey <br> Serial No.</span>
-                              </td>
-                              <td scope="col" style="width: 200px;">
-                                 <span>District</span>
-                              </td>
-                              <td scope="col" style="width: 190px;">
-                                 <span>Section</span>
-                              </td>
-                              <td scope="col" style="width: 190px;">
-                                 <span>Brand</span>
-                              </td>
-                              <td scope="col" style="width: 190px;">
-                                 <span>Type</span>
-                              </td>
-                              <td scope="col" style="width: 190px;">
-                                 <span>
-                                    Operating
-                                    <br>
-                                    System
-                                 </span>
-                              </td>
-                              <td scope="col" style="width: 190px;">
-                                 <span>
-                                    Invoice
-                                    <br>
-                                    No.
-                                 </span>
-                              </td>
-                              <td scope="col" style="width: 190px;">
-                                 <span>Supplier <br> Name</span>
-                              </td>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <tr>
-                              <td>01</td>
-                              <td>988816</td>
-                              <td>Montgomery</td>
-                              <td>Section A</td>
-                              <td>Volvo. 1927</td>
-                              <td>Private Car</td>
-                              <td>IN.767687</td>
-                              <td>RF67988</td>
-                              <td>Demo supplier</td>
-                           </tr>
-                           <tr>
-                              <td>02</td>
-                              <td>7845496</td>
-                              <td>Anchorage</td>
-                              <td>Section B</td>
-                              <td>Toyota. 1936</td>
-                              <td>Personal Car</td>
-                              <td>IN.767687</td>
-                              <td>RF67988</td>
-                              <td>Shisir Imran</td>
-                           </tr>
-                           <tr>
-                              <td>03</td>
-                              <td>4754845</td>
-                              <td>Phoenix</td>
-                              <td>Section C</td>
-                              <td>BMW. 1971</td>
-                              <td>Office Car</td>
-                              <td>IN.767687</td>
-                              <td>RF67988</td>
-                              <td>Marimath Imran</td>
-                           </tr>
-                           
-                        </tbody>
-                     </table>
+               <div class="barcodePageWrapper mt-4">
+                  <div class="brcodePageTable">
+                     <form id="myForm">
+                        <div class="table-responsive">
+                           <table class="table table-borderless">
+                              <thead>
+                                 <tr>
+                                    <th></th>
+                                    <th class="form_field"></th>
+                                    <th class="text-center">Selected Values For Item Code</th>
+                                    <th class="text-center">Selected Values For BarCode</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <!-- single item -->
+                                 <tr>
+                                    <td>Type</td>
+                                    <td>
+                                       <select class="form-select" id="first-dropdown">
+                                          <option value="" disabled selected>Select a type</option>
+                                          <option value="FAIL SP - SP">FAIL SP - SP</option>
+                                          <option value="PELAN">PELAN</option>
+                                          <option value="BUKU">BUKU</option>
+                                          <option value="CD - SP">CD</option>
+                                          <option value="HDD">HDD</option>
+                                          option
+                                       </select>
+                                    </td>
+                                    <td class="text-center" id="typeCode">-</td>
+                                    <td class="text-center">-</td>
+                                 </tr>
+                                 <!-- single item -->
+                                 <tr>
+                                    <td>Year</td>
+                                    <td>
+                                       <input type="number" id="year" class="form-control" min="4" onKeyPress="if(this.value.length==4) return false;">
+                                    </td>
+                                    <td class="text-center" id="yearCode">-</td>
+                                    <td class="text-center" id="yearCode2">-</td>
+                                 </tr>
+                                 <!-- single item -->
+                                 <tr>
+                                    <td id="Dlabel">Select type first</td>
+                                    <td>
+                                       <input type="number" class="form-control" id="digiInput" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;">
+                                    </td>
+                                    <td class="text-center" id="digitCode">-</td>
+                                    <td class="text-center" id="digitCode2">-</td>
+                                 </tr>
+                                 <!-- single item -->
+                                 <tr>
+                                    <td id="kodLabel">Select type first</td>
+                                    <td>
+                                       <select class="form-select" id="second-dropdown">
+                                          <option value="" disabled selected>Select a type first</option>
+                                       </select>
+                                    </td>
+                                    <td class="text-center" id="seconddropCode">-</td>
+                                    <td class="text-center" id="seconddropCode2">-</td>
+                                 </tr>
+                                 <!-- single item -->
+                                 <tr>
+                                    <td>Dareah</td>
+                                    <td>
+                                       <select class="form-select" id="dareah">
+                                          <option selected disabled>Select Dareah</option>
+                                          <option value="BM - 1000">Brunei Muara - BM - 1000</option>
+                                          <option value="TU - 2000">Tutong - TU - 2000</option>
+                                          <option value="KB - 3000">Kuala Belait - KB - 3000</option>
+                                          <option value="TE - 4000">Temburong - TE - 4000</option>
+                                       </select>
+                                    </td>
+                                    <td class="text-center" id="draCode">-</td>
+                                    <td class="text-center" id="draCode2">-</td>
+                                 </tr>
+                                 <!-- single item -->
+                                 <tr>
+                                    <td>G/P</td>
+                                    <td>
+                                       <select class="form-select" id="gp">
+                                          <option selected disabled>Select G/P</option>
+                                          <option value="G">Government - G</option>
+                                          <option value="P">Private - P</option>
+                                       </select>
+                                    </td>
+                                    <td class="text-center" id="gpCode">-</td>
+                                    <td class="text-center">-</td>
+                                 </tr>
+                                 <!-- single item -->
+                                 <tr>
+                                    <td>Item Code</td>
+                                    <td colspan="3">
+                                       <input id="itemCodeFinal" type="text" class="form-control text-center" readonly value="-">
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td>Bar Code</td>
+                                    <td colspan="3">
+                                       <input type="text" class="form-control text-center" id="barCodeFinal" readonly value="-">
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </form>
                   </div>
                </div>
             </div>
          </div>
       </div>
    </div>
-
+   
 
    <!-- all javascript load here -->
-   <script src="asset/js/vendor/jquery-3.3.1.min.js"></script>
+   <!-- <script src="asset/js/vendor/jquery-3.3.1.min.js"></script> -->
+   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
    <script src="asset/js/bootstrap.bundle.min.js"></script>
    <script src="asset/js/plugin/jquery.nice-select.min.js"></script>
    <script src="asset/js/custom.js"></script>
-   <!-- data table js file -->
-   <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-   <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+   <script src="./asset/js/BarcodePage.js"></script>
    <script>
-      new DataTable('#computerListTable',{
-         language: {
-            paginate: {
-              next: "»", // or '→'
-              previous: "«", // or '←'
-            },
-         },
-
-
-         initComplete: function (){
-            var notApplyFilterOnColum = [];
-            var inputFilterOnColum = [0,1,2,3,4,5,6,7];
-            var showFilterBox = "afterHeading"; 
-            
-            $(".filter_row").remove(); // default remove
-        
-            var theadSecondRow = '<tr class="filter_row">';
-            $(this)
-              .find("thead tr td")
-              .each(function (index) {
-                theadSecondRow += '<td class="select_filter-' + index + '"></td>';
-              });
-            theadSecondRow += "</tr>";
-        
-            if (showFilterBox === "beforeHeading") {
-              $(this).find("thead").prepend(theadSecondRow);
-            } else if (showFilterBox === "afterHeading") {
-              $(theadSecondRow).insertAfter($(this).find("thead tr"));
+      const checklength = (len,val,name) => {
+         var minusVal = len - val.length;
+         var calculateVal = val;
+         if(val.length != 0){
+            for(let i = 0; i < minusVal; i++){
+               calculateVal = 0 + calculateVal
             }
-        
-            this.api()
-              .columns()
-              .every(function (index) {
-                var column = this;
-                console.log(column);
-                if (
-                  inputFilterOnColum.indexOf(index) >= 0 &&
-                  notApplyFilterOnColum.indexOf(index) < 0
-                ) {
-                  $("td.select_filter-" + index).html(
-                    '<input type="text" class="form-control">'
-                  );
-        
-                  $("td input.form-control").on("keyup change clear", function () {
-                    if (column.search() !== this.value) {
-                      column.search(this.value).draw();
-                    }
-                  });
-                } else if (notApplyFilterOnColum.indexOf(index) < 0) {
-                  var select = $(
-                    '<select class="form-select"><option value="">Select</option></select>'
-                  ).on("change", function () {
-                    var val = $.fn.dataTable.util.escapeRegex($(this).val());
-                    column.search(val ? "^" + val + "$" : "", true, false).draw();
-                  });
-        
-                  $("td.select_filter-" + index).html(select);
-                  column
-                    .data()
-                    .unique()
-                    .sort()
-                    .each(function (d, j) {
-                      select.append('<option value="' + d + '">' + d + "</option>");
-                    });
-                }
-              });
-          }
-      })
+         }
+         $('#' + name).val(calculateVal)
+         localStorage.setItem('digiInput',calculateVal)
+      }
    </script>
 </body>
 

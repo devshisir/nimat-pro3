@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "replacement": "Records filtered by the product category and any previous selection",
+  "menu": [
+    {
+      "name": "jQuery",
+      "value": "1"
+    },
+    {
+      "name": "Angular",
+      "value": "2"
+    },
+    {
+      "name": "React",
+      "value": "3"
+    },
+    {
+      "name": "React Native",
+      "value": "4"
+    },
+    {
+      "name": "Vue.js",
+      "value": "5"
+    }
+  ]
+}

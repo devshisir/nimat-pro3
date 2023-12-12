@@ -2,7 +2,7 @@
     padding: 20px 0px;
 
     .single_menu_box {
-        padding: 0px 25px;
+        padding: 0px 0px;
 
         .maninInfo {
             margin-bottom: 5px;
@@ -43,5 +43,42 @@
         background-color: #DEDEDE;
         height: 1px;
         margin: 15px 0px;
+    }
+
+    .accordion-item {
+        border: none;
+
+        .accordion-header {
+            .accordion-button {
+                padding: 5px 20px;
+                color: $brand;
+                font-size: 17px;
+                font-family: mainfont_bold !important;
+            }
+
+            .accordion-button::after {
+                flex-shrink: 0;
+                width: 1.2rem;
+                height: 1.2rem;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231A7159'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            }
+
+            .accordion-button:focus {
+                box-shadow: none;
+                outline: none;
+                background-color: transparent;
+            }
+
+            .accordion-button:not(.collapsed) {
+                box-shadow: none;
+                outline: none;
+                background-color: transparent;
+                color: $brand;
+            }
+        }
+
+        .accordion-body {
+            padding: 5px 20px;
+        }
     }
 }

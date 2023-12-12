@@ -1,0 +1,43 @@
+.barcodePageWrapper {
+    .brcodePageTable {
+        table {
+            min-width: 100%;
+            vertical-align: middle;
+            width: max-content;
+
+            thead {
+                tr {
+                    th {
+                        width: 180px;
+                        background-color: $brand;
+                        color: #fff;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+
+                        &:first-child {
+                            border-radius: 10px 0px 0px 10px;
+                        }
+
+                        &:last-child {
+                            border-radius: 0px 10px 10px 0px;
+                        }
+                    }
+
+                    .form_field {
+                        min-width: 400px;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    &:first-child {
+                        td {
+                            padding-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
