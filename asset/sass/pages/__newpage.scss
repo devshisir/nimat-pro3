@@ -1,0 +1,178 @@
+.inventoryHomePage {
+    padding: 50px 0px;
+
+    .title {
+        margin-bottom: 60px;
+
+        h4 {
+            color: $brand;
+            font-weight: 800;
+            text-align: center;
+            font-family: mainfont_bold;
+
+            img {
+                height: 60px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .singleItem {
+        .icon {
+            img {
+                height: 90px;
+            }
+        }
+
+        .content {
+            margin-top: 40px;
+            border-right: 1px solid #e5e5e5;
+
+            h5 {
+                color: $brand;
+                font-family: mainfont_bold;
+                font-size: 19px;
+            }
+
+            p {
+                margin-top: 4px;
+                color: #050505;
+                font-size: 14px;
+            }
+
+            img {
+                margin-top: 30px;
+                height: 40px;
+            }
+        }
+
+        .last {
+            border: none;
+        }
+    }
+
+    .purchaseDetailsPageItem {
+
+        a,
+        button {
+            text-align: center;
+            border: 2px solid $brand;
+            border-radius: 10px;
+            padding: 40px 20px;
+            margin-bottom: 25px;
+            display: block;
+            min-height: 195px;
+        }
+
+
+        img {
+            height: 60px;
+            height: 50px;
+        }
+
+        h5 {
+            font-family: mainfont_bold;
+            font-size: 18px;
+            margin-top: 20px;
+            color: $brand;
+        }
+    }
+
+    .assetsConsuableBox {
+        .topInfo {
+            h4 {
+                font-family: mainfont_bold;
+                color: $brand;
+                font-size: 19px;
+                text-align: center;
+            }
+        }
+
+        .acorWrapper {
+            margin-top: 20px;
+
+            .accordion-item {
+                border: none;
+                margin-bottom: 10px;
+                text-align: center;
+
+                .accordion-header {
+                    .btn {
+                        width: 250px;
+                    }
+
+                    a,
+                    button[aria-expanded="true"] {
+                        background-color: $brand;
+                        color: #fff !important;
+                    }
+                }
+
+                .accordion-body {
+                    padding: 10px 0px;
+
+                    ul {
+                        li {
+                            margin-bottom: 10px;
+
+                            &:last-child {
+                                margin-bottom: 0px;
+                            }
+
+                            a {
+                                width: 250px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .informationCenterItem {
+        text-align: center;
+
+        .btn {
+            width: 80%;
+            font-family: mainfont_bold;
+            padding: 13px 30px;
+
+            .icon {
+                height: 30px;
+                margin-right: 10px;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: transparent !important;
+                color: $brand !important;
+            }
+        }
+
+        p {
+            margin-top: 10px;
+            color: $brand;
+            font-family: mainfont_bold;
+        }
+    }
+
+    .itemMasterCard {
+        border: 2px solid $brand;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        padding: 20px 30px;
+        border-radius: 10px;
+
+        img {
+            height: 40px;
+        }
+
+        h5 {
+            margin-top: 10px;
+            font-family: mainfont_bold;
+            color: $brand;
+            font-size: 20px;
+        }
+    }
+}

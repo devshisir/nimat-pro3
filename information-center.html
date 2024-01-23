@@ -1,0 +1,301 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+   <meta charset="utf-8">
+   <title>JABATAN UKUR</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="asset/img/favicon.png" sizes="180x180">
+   <link rel="icon" href="asset/img/favicon.png" sizes="32x32" type="image/png">
+   <link rel="icon" href="asset/img/favicon.png" sizes="16x16" type="image/png">
+   <!-- global styles link -->
+   <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+   <link rel="stylesheet" href="asset/css/nice-select.css">
+   <link rel="stylesheet" href="asset/css/fontawsome.min.css">
+   <link rel="stylesheet" href="asset/css/style.css">
+   <link rel="stylesheet" href="asset/css/responsive.css">
+</head>
+
+<body>
+
+   <div id="mainWrapper">
+      <!-- header top -->
+      <header id="headerTop">
+         <div class="leftInfo">
+            <div class="logoBox">
+               <a href="/">
+                  <img src="./asset/img/logo.png" alt="">
+               </a>
+            </div>
+            <div class="toggleButton">
+               <button class="toggle_button">
+                  <i class="fa-light fa-bars"></i>
+               </button>
+            </div>
+         </div>
+         <div class="rightInfo">
+            <div class="user_top">
+               <div class="header_right text-end">
+                  <ul>
+                     <li class="notificationButton">
+                        <a href="#"><i class="fa-regular fa-bell"></i></a>
+                     </li>
+                     <li class="userInfo">
+                        <div class="btn-group">
+                           <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span><i class="fa-solid fa-user"></i></span>
+                              <p>Michael</p>
+                           </button>
+                           <ul class="dropdown-menu dropdown-menu-end" style="">
+                              <li>
+                                 <a href="#" class="dropdown-item">Profile</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="dropdown-item">Settings</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="dropdown-item">Another Link</a>
+                              </li>
+                              <li>
+                                 <a href="#" class="dropdown-item">Logout</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="global_header">
+               <div class="row">
+                  <div class="col-lg-7 col-12">
+                     <div class="breadComeTitle">
+                        <h4>Geodetic Information Centre</h4>
+                     </div>
+                  </div>
+                  <div class="col-lg-5 col-12">
+                     <div class="single_input d-flex justify-content-end">
+                        <div style="width: 300px;">
+                           <div class="input-group small">
+                              <input type="text" class="form-control small" placeholder="Search…">
+                              <span class="input-group-text" id="basic-addon2">
+                                 <i class="fa-regular fa-magnifying-glass"></i>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- app layout -->
+      <div class="appLayout">
+         <!-- sidebar -->
+         <div class="sidebar">
+            <div class="accordion" id="sidebarAccordion">
+               <div class="accordion-item">
+                  <h2 class="accordion-header">
+                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#colmenu1" aria-expanded="true">
+                        Maintenance
+                     </button>
+                  </h2>
+                  <div id="colmenu1" class="accordion-collapse collapse show" data-bs-parent="#sidebarAccordion">
+                     <div class="accordion-body">
+                        <div class="single_menu_box">
+                           <ul>
+                              <li>
+                                 <a href="#">Barcode template</a>
+                              </li>
+                              <li>
+                                 <a class="active" href="#">Item code template</a>
+                              </li>
+                              <li>
+                                 <a href="#">Brand Master</a>
+                              </li>
+                              <li>
+                                 <a href="#">Category Master</a>
+                              </li>
+                              <li>
+                                 <a href="#">Inventory Master</a>
+                              </li>
+                              <li>
+                                 <a href="#">Location Master</a>
+                              </li>
+                              <li>
+                                 <a href="#">Branch Master</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Search (Table View)</a>
+                              </li>
+                              <li>
+                                 <a href="#">Membership Master</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="menu_devider"></div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colmenu2" aria-expanded="false">
+                        Transactions
+                     </button>
+                  </h2>
+                  <div id="colmenu2" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
+                     <div class="accordion-body">
+                        <div class="single_menu_box">
+                           <ul>
+                              <li>
+                                 <a href="#">New Item</a>
+                              </li>
+                              <li>
+                                 <a href="#">Transfer</a>
+                              </li>
+                              <li>
+                                 <a href="#">Distribution</a>
+                              </li>
+                              <li>
+                                 <a href="#">Loan </a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Lost</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Found</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Scrap</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="menu_devider"></div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colmenu3" aria-expanded="false">
+                        Reports
+                     </button>
+                  </h2>
+                  <div id="colmenu3" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
+                     <div class="accordion-body">
+                        <div class="single_menu_box">
+                           <ul>
+                              <li>
+                                 <a href="#">Member Listing Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Listing Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Distribution</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Movement Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Received Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Sales Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Loan Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">On Loan Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Return from Loan Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Reservation Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Cancel Reservation</a>
+                              </li>
+                              <li>
+                                 <a href="#">Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Distribution Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Transfer Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Lost Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Found Report</a>
+                              </li>
+                              <li>
+                                 <a href="#">Item Scrap Report</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="app_wrapper">
+            <div class="inventoryHomePage">
+               <div class="title">
+                  <h4>
+                     <img src="./asset/img/icons/barcode.png" alt="">
+                     Geodetic Information Centre
+                  </h4>
+               </div>
+               <div class="row">
+                  <div class="col-xl-10 col-lg-10 col-12 mx-auto">
+                     <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+                           <div class="informationCenterItem">
+                              <a href="#" class="btn btn-outline-primary">
+                                 <img class="icon" src="./asset/img/icons/cart.png" alt="">
+                                 Item Master
+                              </a>
+                              <p>Description</p>
+                           </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+                           <div class="informationCenterItem">
+                              <a href="#" class="btn btn-outline-primary">
+                                 <img class="icon" src="./asset/img/icons/barcode2.png" alt="">
+                                 Generate Barcode
+                              </a>
+                              <p>Description</p>
+                           </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+                           <div class="informationCenterItem">
+                              <a href="#" class="btn btn-outline-primary">
+                                 <img class="icon" src="./asset/img/icons/activity.png" alt="">
+                                 Activity (Status)
+                              </a>
+                              <p>Description</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+
+   <!-- all javascript load here -->
+   <!-- <script src="asset/js/vendor/jquery-3.3.1.min.js"></script> -->
+   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+   <script src="asset/js/bootstrap.bundle.min.js"></script>
+   <script src="asset/js/custom.js"></script>
+</body>
+
+</html>
