@@ -176,3 +176,103 @@
         }
     }
 }
+
+.sidebar .accordion-item .accordion-header .accordion-button {
+    align-items: flex-start;
+    column-gap: 10px;
+}
+
+// sidebarWithSubMenu
+.sidebar {
+    .sidebarWithSubMenu {
+        .accordion-body {
+            padding: 6px 0px;
+        }
+
+        .accordion-item .accordion-header .accordion-button {
+            display: flex;
+            align-items: center;
+
+            .contentMenu {
+                text-transform: uppercase;
+                font-size: 14px;
+                font-family: mainfont_bold !important;
+            }
+
+        }
+
+        .subMenuAcordion {
+            .accordion-item .accordion-header .accordion-button {
+                font-family: mainfont_bold;
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+
+                .icon {
+                    font-size: 20px;
+                }
+
+                &::after {
+                    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231A7159' class='bi bi-plus'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+                }
+            }
+
+            .accordion-header .accordion-button:not(.collapsed):after {
+                background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231A7159' class='bi bi-dash'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+            }
+
+            .accordion-body {
+                padding: 5px 50px;
+
+                ul {
+                    li {
+                        a {
+                            color: #777777;
+                            padding: 6px 0px;
+                            display: block;
+
+                            .icon {
+                                min-width: 25px;
+                                display: inline-block;
+                            }
+
+                            &:hover {
+                                color: $brand;
+                            }
+                        }
+
+                        .active {
+                            color: $brand;
+                        }
+                    }
+                }
+            }
+        }
+
+        .singleLineMenu {
+            ul {
+                li {
+                    a {
+                        padding: 0px 20px;
+                        display: flex;
+                        align-items: center;
+                        column-gap: 10px;
+
+                        .content {
+                            color: $brand;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            font-family: mainfont_bold !important;
+                        }
+
+                        .icon {
+                            font-size: 20px;
+                            color: $brand;
+                            min-width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -95,45 +95,91 @@
       <div class="appLayout">
          <!-- sidebar -->
          <div class="sidebar">
-            <div class="accordion" id="sidebarAccordion">
+            <div class="accordion sidebarWithSubMenu" id="sidebarAccordion">
                <div class="accordion-item">
                   <h2 class="accordion-header">
                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#colmenu1" aria-expanded="true">
-                        Maintenance
+                        <span class="icon">
+                           <img src="./asset/img/icons/sidebar-2/cart.png" alt="">
+                        </span>
+                        <div class="contentMenu">
+                           Purchase Details
+                        </div>
                      </button>
                   </h2>
                   <div id="colmenu1" class="accordion-collapse collapse show" data-bs-parent="#sidebarAccordion">
                      <div class="accordion-body">
-                        <div class="single_menu_box">
-                           <ul>
-                              <li>
-                                 <a href="#">Barcode template</a>
-                              </li>
-                              <li>
-                                 <a class="active" href="#">Item code template</a>
-                              </li>
-                              <li>
-                                 <a href="#">Brand Master</a>
-                              </li>
-                              <li>
-                                 <a href="#">Category Master</a>
-                              </li>
-                              <li>
-                                 <a href="#">Inventory Master</a>
-                              </li>
-                              <li>
-                                 <a href="#">Location Master</a>
-                              </li>
-                              <li>
-                                 <a href="#">Branch Master</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Search (Table View)</a>
-                              </li>
-                              <li>
-                                 <a href="#">Membership Master</a>
-                              </li>
-                           </ul>
+                        <div class="subMenuAcordion">
+                           <div class="accordion" id="accordionSub1">
+                              <div class="accordion-item">
+                                 <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub1" aria-expanded="false">
+                                    <span class="icon"><i class="fa-regular fa-square-poll-horizontal"></i></span>
+                                       Master
+                                    </button>
+                                 </h2>
+                                 <div id="sub1" class="accordion-collapse collapse" data-bs-parent="#accordionSub1">
+                                    <div class="accordion-body">
+                                       <ul>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-regular fa-chart-tree-map"></i>
+                                             </span>
+                                             <span class="content">Section</span>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-sharp fa-regular fa-truck-fast"></i>
+                                             </span>
+                                             <span class="content">Supplier</span>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-regular fa-warehouse"></i>
+                                             </span>
+                                             <span class="content">Inventory</span>
+                                          </a>
+                                       </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-item">
+                                 <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub2" aria-expanded="false">
+                                    <span class="icon"><i class="fa-regular fa-clipboard-list"></i></span>
+                                       Transaction
+                                    </button>
+                                 </h2>
+                                 <div id="sub2" class="accordion-collapse collapse" data-bs-parent="#accordionSub1">
+                                    <div class="accordion-body">
+                                       <ul>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-light fa-truck-clock"></i>
+                                             </span>
+                                             <span class="content">Deliver..(Do)</span>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-light fa-scanner-keyboard"></i>
+                                             </span>
+                                             <span class="content">Po</span>
+                                          </a>
+                                       </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -142,35 +188,71 @@
                <div class="accordion-item">
                   <h2 class="accordion-header">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colmenu2" aria-expanded="false">
-                        Transactions
+                        <span class="icon">
+                           <img src="./asset/img/icons/sidebar-2/bar-code.png" alt="">
+                        </span>
+                        <div class="contentMenu">
+                           Geodetic Information Centre
+                        </div>
                      </button>
                   </h2>
                   <div id="colmenu2" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
                      <div class="accordion-body">
-                        <div class="single_menu_box">
-                           <ul>
-                              <li>
-                                 <a href="#">New Item</a>
-                              </li>
-                              <li>
-                                 <a href="#">Transfer</a>
-                              </li>
-                              <li>
-                                 <a href="#">Distribution</a>
-                              </li>
-                              <li>
-                                 <a href="#">Loan </a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Lost</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Found</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Scrap</a>
-                              </li>
-                           </ul>
+                        <div class="subMenuAcordion">
+                           <div class="accordion" id="accordionSub2">
+                              <div class="accordion-item">
+                                 <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#geosub1" aria-expanded="false">
+                                    <span class="icon"><i class="fa-regular fa-square-poll-horizontal"></i></span>
+                                       Master
+                                    </button>
+                                 </h2>
+                                 <div id="geosub1" class="accordion-collapse collapse" data-bs-parent="#accordionSub2">
+                                    <div class="accordion-body">
+                                       <ul>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-regular fa-chart-tree-map"></i>
+                                             </span>
+                                             <span class="content">Membership master</span>
+                                          </a>
+                                       </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-item">
+                                 <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#geosub2" aria-expanded="false">
+                                    <span class="icon"><i class="fa-regular fa-clipboard-list"></i></span>
+                                       Transaction
+                                    </button>
+                                 </h2>
+                                 <div id="geosub2" class="accordion-collapse collapse" data-bs-parent="#accordionSub2">
+                                    <div class="accordion-body">
+                                       <ul>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-sharp fa-light fa-table"></i>
+                                             </span>
+                                             <span class="content">Item table view</span>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-regular fa-landmark"></i>
+                                             </span>
+                                             <span class="content">Item loan</span>
+                                          </a>
+                                       </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -179,69 +261,130 @@
                <div class="accordion-item">
                   <h2 class="accordion-header">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colmenu3" aria-expanded="false">
-                        Reports
+                        <span class="icon">
+                           <img src="./asset/img/icons/sidebar-2/box.png" alt="">
+                        </span>
+                        <div class="contentMenu">
+                           Assets and Consumables
+                        </div>
                      </button>
                   </h2>
                   <div id="colmenu3" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
                      <div class="accordion-body">
-                        <div class="single_menu_box">
-                           <ul>
-                              <li>
-                                 <a href="#">Member Listing Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Listing Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">Distribution</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Movement Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Received Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Sales Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Loan Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">On Loan Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Return from Loan Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Reservation Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Cancel Reservation</a>
-                              </li>
-                              <li>
-                                 <a href="#">Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Distribution Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Transfer Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Lost Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Found Report</a>
-                              </li>
-                              <li>
-                                 <a href="#">Item Scrap Report</a>
-                              </li>
-                           </ul>
+                        <div class="subMenuAcordion">
+                           <div class="accordion" id="accordionSub3">
+                              <div class="accordion-item">
+                                 <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conosub1" aria-expanded="false">
+                                    <span class="icon"><i class="fa-regular fa-square-poll-horizontal"></i></span>
+                                       Master
+                                    </button>
+                                 </h2>
+                                 <div id="conosub1" class="accordion-collapse collapse" data-bs-parent="#accordionSub3">
+                                    <div class="accordion-body">
+                                       <ul>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-solid fa-bars-staggered"></i>
+                                             </span>
+                                             <span class="content">District</span>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-light fa-ballot-check"></i>
+                                             </span>
+                                             <span class="content">Item type</span>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-regular fa-list"></i>
+                                             </span>
+                                             <span class="content">Category</span>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-duotone fa-bring-forward"></i>
+                                             </span>
+                                             <span class="content">Brand</span>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-regular fa-location-dot"></i>
+                                             </span>
+                                             <span class="content">Location</span>
+                                          </a>
+                                       </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="accordion-item">
+                                 <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conosub2" aria-expanded="false">
+                                    <span class="icon"><i class="fa-regular fa-clipboard-list"></i></span>
+                                       Transaction
+                                    </button>
+                                 </h2>
+                                 <div id="conosub2" class="accordion-collapse collapse" data-bs-parent="#accordionSub3">
+                                    <div class="accordion-body">
+                                       <ul>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-regular fa-chart-network"></i>
+                                             </span>
+                                             <span class="content">Consumables distribution</span>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#">
+                                             <span class="icon">
+                                                <i class="fa-regular fa-location-crosshairs"></i>
+                                             </span>
+                                             <span class="content">Consumables location</span>
+                                          </a>
+                                       </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
                </div>
+               <div class="menu_devider"></div>
+               <div class="singleLineMenu">
+                  <ul>
+                     <li>
+                        <a href="#">
+                           <span class="icon"><i class="fa-sharp fa-regular fa-file-chart-column"></i></span>
+                           <span class="content">Reports</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="menu_devider"></div>
+               <div class="singleLineMenu">
+                  <ul>
+                     <li>
+                        <a href="#">
+                           <span class="icon"><i class="fa-regular fa-gear"></i></span>
+                           <span class="content">Settings</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               
             </div>
          </div>
          <div class="app_wrapper">
